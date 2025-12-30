@@ -19,7 +19,7 @@ const ProductDetails = () => {
   return (
     <div className="min-h-[90vh] bg-gray-50 flex justify-center px-4 py-8">
       <div className="bg-white w-full max-w-4xl   p-6">
-        {/* Header */}
+        
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-1">{product.title}</h2>
           <span className="inline-block bg-blue-100 text-blue-700 text-sm px-3 py-1 rounded-full">
@@ -27,7 +27,7 @@ const ProductDetails = () => {
           </span>
         </div>
 
-        {/* Product Info */}
+        
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex justify-center items-center border  p-4">
             <img

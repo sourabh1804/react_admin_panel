@@ -18,13 +18,13 @@ const Users = () => {
   return (
     <div className="p-6 space-y-6 bg-gray-100 min-h-screen">
       
-      {/* Header */}
+      
       <div>
         <h1 className="text-2xl font-bold text-blue-900">Users</h1>
         <p className="text-gray-500">List of all registered users</p>
       </div>
 
-      {/* Table */}
+      
       <div className="overflow-x-auto bg-white shadow rounded-xl">
         <table className="w-full border-collapse">
           

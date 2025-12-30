@@ -24,7 +24,7 @@ const Dashboard = () => {
   return (
     <div className="p-8 space-y-12 bg-gray-100 min-h-screen">
 
-      {/* Header + Stats */}
+      
       <div className="bg-white shadow p-6 space-y-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
@@ -44,7 +44,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Products Slider */}
+      
       <div className="bg-white shadow p-6">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold text-gray-800">Latest Products</h2>
@@ -71,7 +71,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      {/* Users Slider */}
+      
       <div className="bg-white shadow p-6">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold text-gray-800">Latest Users</h2>

@@ -20,7 +20,6 @@ const UserDetails = () => {
     <div className="min-h-screen bg-gray-50 flex justify-center px-4 py-8">
       <div className="bg-white w-full max-w-3xl rounded-2xl shadow-lg p-6">
 
-        {/* Header */}
         <div className="flex items-center space-x-4 mb-6">
           <div className="w-14 h-14 rounded-full bg-blue-100 flex items-center justify-center text-xl font-bold text-blue-700">
             {user.name.charAt(0)}
@@ -31,7 +30,7 @@ const UserDetails = () => {
           </div>
         </div>
 
-        {/* Contact Info */}
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
           <div className="border rounded-lg p-4">
             <p className="text-sm text-gray-500">Email</p>
@@ -54,7 +53,7 @@ const UserDetails = () => {
           </div>
         </div>
 
-        {/* Address */}
+        
         <div className="mb-6">
           <h3 className="text-lg font-semibold mb-3 text-gray-800">Address</h3>
           <div className="border rounded-lg p-4 space-y-1">
@@ -64,7 +63,7 @@ const UserDetails = () => {
           </div>
         </div>
 
-        {/* Company */}
+        
         <div>
           <h3 className="text-lg font-semibold mb-3 text-gray-800">Company</h3>
           <div className="border rounded-lg p-4 space-y-2">

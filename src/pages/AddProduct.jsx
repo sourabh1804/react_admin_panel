@@ -15,7 +15,7 @@ const AddProduct = () => {
     image: "",
   });
 
-  // Fetch categories from API
+  
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories")
       .then(res => res.json())
@@ -23,7 +23,7 @@ const AddProduct = () => {
       .catch(() => toast.error("Failed to load categories"));
   }, []);
 
-  // Handle image selection and preview
+  
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -38,11 +38,9 @@ const AddProduct = () => {
     setForm({ ...form, image: previewURL });
   };
 
-  // Submit form
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validation
     if (!form.title || !form.category || !form.price || !form.description || !form.image) {
       toast.error("All fields including image are required");
       return;
