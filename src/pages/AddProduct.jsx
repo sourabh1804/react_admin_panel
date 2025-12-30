@@ -77,8 +77,8 @@ const AddProduct = () => {
   };
 
   return (
-    <div className="flex justify-center items-start py-8 px-4 bg-gray-50">
-      <div className="bg-white w-full max-w-md rounded-xl shadow-lg p-6">
+    <div className="flex justify-center items-start py-8 px-4">
+      <div className="bg-white w-full max-w-md  p-6">
         <h2 className="text-xl font-bold text-center text-blue-900">
           Add New Product
         </h2>

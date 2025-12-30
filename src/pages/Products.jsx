@@ -18,7 +18,7 @@ const Products = () => {
   return (
     <div className="p-6 space-y-6">
       <div className="mb-4">
-        <h1 className="text-2xl font-bold text-green-900">Products</h1>
+        <h1 className="text-2xl font-bold text-black">Products</h1>
         <p className="text-gray-500">Browse all available products</p>
       </div>
 
@@ -26,20 +26,20 @@ const Products = () => {
         {products.map(product => (
           <div
             key={product.id}
-            className="bg-green-50 border border-green-100 rounded-xl p-4 shadow hover:shadow-lg transition flex flex-col"
+            className="bg-gray-50 border border-green-100 rounded-xl p-4  flex flex-col"
           >
             <img
               src={product.image}
               alt={product.title}
-              className="h-40 w-full object-contain mb-4"
+              className="h-20 w-full object-contain mb-4"
             />
-            <h3 className="font-semibold text-green-900 line-clamp-2 mb-1">
+            <h3 className="font-semibold text-blue-600 line-clamp-2 mb-1">
               {product.title}
             </h3>
-            <p className="text-green-700 font-semibold mb-2">₹ {product.price}</p>
+            <p className="text-red-700 font-semibold mb-2">₹ {product.price}</p>
             <Link
               to={`/products/${product.id}`}
-              className="mt-auto text-blue-600 hover:underline text-sm"
+              className="mt-auto text-blue-800 hover:underline text-sm"
             >
               View Details
             </Link>

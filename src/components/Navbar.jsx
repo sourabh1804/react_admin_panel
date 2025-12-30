@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="fixed w-full top-0 z-10 flex justify-between items-center px-4 py-3 bg-blue-600 text-white">
+      <div className="fixed w-full top-0 z-10 flex justify-between items-center px-4 py-5 bg-black text-white">
         <h1 className="font-bold text-lg">Admin Panel</h1>
 
         <div className="hidden md:flex space-x-6">

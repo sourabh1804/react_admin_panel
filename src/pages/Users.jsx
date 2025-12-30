@@ -16,39 +16,63 @@ const Users = () => {
   if (loading) return <Loader />;
 
   return (
-    <div className="p-6 space-y-6">
-      <div className="mb-4">
+    <div className="p-6 space-y-6 bg-gray-100 min-h-screen">
+      
+      {/* Header */}
+      <div>
         <h1 className="text-2xl font-bold text-blue-900">Users</h1>
         <p className="text-gray-500">List of all registered users</p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {users.map(user => (
-          <div
-            key={user.id}
-            className="bg-blue-50 border border-blue-100 rounded-xl p-4 shadow hover:shadow-lg transition duration-200"
-          >
-            <div className="flex items-center space-x-3 mb-3">
-              <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center text-blue-700 font-bold">
-                {user.name.charAt(0)}
-              </div>
-              <div>
-                <h3 className="font-semibold text-blue-900">{user.name}</h3>
-                <p className="text-gray-600 text-sm">{user.username}</p>
-              </div>
-            </div>
+      {/* Table */}
+      <div className="overflow-x-auto bg-white shadow rounded-xl">
+        <table className="w-full border-collapse">
+          
+          <thead className="bg-blue-100">
+            <tr>
+              <th className="text-left p-4 text-sm font-semibold text-blue-900">Name</th>
+              <th className="text-left p-4 text-sm font-semibold text-blue-900">Username</th>
+              <th className="text-left p-4 text-sm font-semibold text-blue-900">Email</th>
+              <th className="text-left p-4 text-sm font-semibold text-blue-900">Company</th>
+              <th className="text-left p-4 text-sm font-semibold text-blue-900">Action</th>
+            </tr>
+          </thead>
 
-            <p className="text-gray-700 text-sm mb-2">Email: {user.email}</p>
-            <p className="text-gray-500 text-sm">Company: {user.company.name}</p>
+          <tbody>
+            {users.map(user => (
+              <tr
+                key={user.id}
+                className="border-b hover:bg-gray-50 transition"
+              >
+                <td className="p-4 font-medium text-gray-800">
+                  {user.name}
+                </td>
 
-            <Link
-              to={`/users/${user.id}`}
-              className="mt-3 inline-block text-blue-600 hover:underline text-sm"
-            >
-              View Details
-            </Link>
-          </div>
-        ))}
+                <td className="p-4 text-gray-600">
+                  {user.username}
+                </td>
+
+                <td className="p-4 text-gray-600">
+                  {user.email}
+                </td>
+
+                <td className="p-4 text-gray-600">
+                  {user.company.name}
+                </td>
+
+                <td className="p-4">
+                  <Link
+                    to={`/users/${user.id}`}
+                    className="text-blue-600 hover:underline text-sm font-medium"
+                  >
+                    View Details
+                  </Link>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+
+        </table>
       </div>
     </div>
   );

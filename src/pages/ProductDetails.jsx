@@ -18,7 +18,7 @@ const ProductDetails = () => {
 
   return (
     <div className="min-h-[90vh] bg-gray-50 flex justify-center px-4 py-8">
-      <div className="bg-white w-full max-w-4xl rounded-2xl shadow-lg p-6">
+      <div className="bg-white w-full max-w-4xl   p-6">
         {/* Header */}
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-gray-900 mb-1">{product.title}</h2>
@@ -29,7 +29,7 @@ const ProductDetails = () => {
 
         {/* Product Info */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="flex justify-center items-center border rounded-xl p-4">
+          <div className="flex justify-center items-center border  p-4">
             <img
               src={product.image}
               alt={product.title}
