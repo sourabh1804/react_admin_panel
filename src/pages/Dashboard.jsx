@@ -1,30 +1,27 @@
-import { useEffect, useState, useRef } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
+import { ProductsContext } from "../Context/ProductContext";
+import { UsersContext } from "../Context/UserContext";
 
 const Dashboard = () => {
-  const [users, setUsers] = useState([]);
-  const [products, setProducts] = useState([]);
-  const [loading, setLoading] = useState(true);
+  
+  const { products, loading: productsLoading, loadAllProducts } = useContext(ProductsContext);
+  const { users, loading: usersLoading, loadAllUsers } = useContext(UsersContext);
 
+  
   useEffect(() => {
-    Promise.all([
-      fetch("https://jsonplaceholder.typicode.com/users").then(res => res.json()),
-      fetch("https://fakestoreapi.com/products").then(res => res.json())
-    ])
-      .then(([usersData, productsData]) => {
-        setUsers(usersData);
-        setProducts(productsData);
-      })
-      .finally(() => setLoading(false));
+    loadAllProducts();
+    loadAllUsers();
   }, []);
 
-  if (loading) return <Loader />;
+  
+  if (productsLoading || usersLoading) return <Loader />;
 
   return (
     <div className="p-8 space-y-12 bg-gray-100 min-h-screen">
-
       
+   
       <div className="bg-white shadow p-6 space-y-6">
         <div>
           <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
@@ -71,7 +68,7 @@ const Dashboard = () => {
         </div>
       </div>
 
-      
+     
       <div className="bg-white shadow p-6">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-xl font-semibold text-gray-800">Latest Users</h2>
